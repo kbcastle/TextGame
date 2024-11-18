@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 71c683283a014c242b63a83cb01f7efd
+  - enabled: 1
     path: Assets/Scenes/StartRoom.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -14,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StoneRoom.unity
     guid: 895e4c3b94a141b40bf52f6815d11ca8
+  - enabled: 1
+    path: Assets/Scenes/StrangeItemRoom.unity
+    guid: f0c2cd7dc260e9842b978c47eb0ef978
   m_configObjects: {}

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIplayer : MonoBehaviour
 {
@@ -8,6 +10,20 @@ public class UIplayer : MonoBehaviour
 
     public List<string> myInventory;
 
+    //title screen
+    public TMP_InputField myInput;
+    public string playerName;
+    public GameObject inputField;
+    public GameObject submitButton;
+   // public GameObject WelcomeObject;
+   public TextMeshProUGUI WelcomeText;
+
+    public string welcomeMessage;
+
+    public GameObject gameStart;
+
+    public string randomItem;
+    //public string replaceText;
 
     void Awake()
     {
@@ -25,7 +41,8 @@ public class UIplayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // WelcomeText = WelcomeObject.GetComponent<TextMeshProUGUI>();
+        gameStart.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,5 +54,31 @@ public class UIplayer : MonoBehaviour
     public void inventoryAdd(string item)
     {
         myInventory.Add(item);
+    }
+
+    public void SetName()
+    {
+        playerName = myInput.text;
+
+        inputField.SetActive(false);
+        submitButton.SetActive(false);
+        gameStart.SetActive(true);
+
+        //string newWelcome = welcomeMessage.Replace(replaceText, playerName);
+        WelcomeText.text = welcomeMessage + playerName;
+    }
+
+   public void GetRandomItem()
+    {
+        int totalItems = myInventory.Count;
+        int finder = Random.Range(0, totalItems-1);
+        randomItem = myInventory[finder];
+    }
+
+    public void ReplaceString()
+    {
+        TextMeshProUGUI currentText = FindObjectOfType<TextMeshProUGUI>();
+        GameObject currentButton = GameObject.FindWithTag("currentButton");
+        currentText.text = "The" + randomItem + "is glowing slightly within your bag.";
     }
 }
