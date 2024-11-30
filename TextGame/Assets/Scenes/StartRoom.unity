@@ -441,7 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2438609449196245844, guid: 31160f9b1de78fc478745cbe696fc1d4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: purplestone
+      value: purple stone
       objectReference: {fileID: 0}
     - target: {fileID: 2438609449196245844, guid: 31160f9b1de78fc478745cbe696fc1d4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument

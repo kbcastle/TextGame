@@ -177,6 +177,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPlayer: {fileID: 0}
+  canvas: {fileID: 0}
+  randomItem: 
+  replace1: 
+  replace2: 
 --- !u!114 &37056634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,7 +912,7 @@ GameObject:
   - component: {fileID: 1118991644}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

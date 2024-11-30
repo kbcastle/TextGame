@@ -22,7 +22,7 @@ public class UIplayer : MonoBehaviour
 
     public GameObject gameStart;
 
-    public string randomItem;
+  
     //public string replaceText;
 
     void Awake()
@@ -68,17 +68,5 @@ public class UIplayer : MonoBehaviour
         WelcomeText.text = welcomeMessage + playerName;
     }
 
-   public void GetRandomItem()
-    {
-        int totalItems = myInventory.Count;
-        int finder = Random.Range(0, totalItems-1);
-        randomItem = myInventory[finder];
-    }
 
-    public void ReplaceString()
-    {
-        TextMeshProUGUI currentText = FindObjectOfType<TextMeshProUGUI>();
-        GameObject currentButton = GameObject.FindWithTag("currentButton");
-        currentText.text = "The" + randomItem + "is glowing slightly within your bag.";
-    }
 }
